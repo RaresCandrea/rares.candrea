@@ -1,7 +1,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Rareș Candrea</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=gambetta@400,400i,500&display=swap">
 
 <style>
 /*
@@ -20,8 +21,8 @@
   --muted:      #7a817a;
   --rule:       rgba(0,55,64,.12);
 
-  --serif: 'Playfair Display', Georgia, serif;
-  --sans:  'Jost', system-ui, sans-serif;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans:  'Gambetta', Georgia, serif;
 
   color-scheme: light;
 }
@@ -123,9 +124,9 @@ body {
 }
 .hero h1 {
   font-family: var(--serif);
-  font-weight: 800;
-  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
-  line-height: 1.06;
+  font-weight: 700;
+  font-size: clamp(1.7rem, 4vw, 3.2rem);
+  line-height: 1.1;
   text-wrap: balance;
   color: var(--ink);
   margin-bottom: 28px;
@@ -157,9 +158,20 @@ body {
   background: var(--warm-white);
 }
 .hero-photo-wrap {
-  width: clamp(160px, 20vw, 220px);
+  width: clamp(100px, 18vw, 200px);
   align-self: end;
   flex-shrink: 0;
+}
+@media (max-width: 640px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .hero-photo-wrap {
+    width: 110px;
+    justify-self: center;
+    order: -1;
+  }
 }
 .hero-photo-placeholder {
   width: 100%;
@@ -372,10 +384,10 @@ body {
 
 .service-card h3 {
   font-family: var(--serif);
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--teal);
-  line-height: 1.25;
+  line-height: 1.2;
   margin-bottom: 10px;
   text-wrap: balance;
 }
