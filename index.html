@@ -24,7 +24,11 @@
   --serif: 'Instrument Serif', Georgia, serif;
   --sans:  'Gambetta', Georgia, serif;
 
-  color-scheme: light;
+  color-scheme: light only;
+}
+
+html, body {
+  color-scheme: light only;
 }
 
 /* Dark mode dezactivat — pagina rămâne mereu light */
@@ -164,13 +168,17 @@ body {
 }
 @media (max-width: 640px) {
   .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 28px;
+    grid-template-columns: 1fr 100px;
+    gap: 16px;
+    align-items: start;
   }
   .hero-photo-wrap {
-    width: 110px;
-    justify-self: center;
-    order: -1;
+    width: 100px;
+    align-self: start;
+    margin-top: 4px;
+  }
+  .hero-photo, .hero-photo-placeholder {
+    border-radius: 8px 8px 0 0;
   }
 }
 .hero-photo-placeholder {
