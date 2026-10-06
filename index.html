@@ -239,10 +239,6 @@ body {
   color: var(--teal);
   margin-bottom: 22px;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .about h2 { color: var(--pale); }
-}
-:root[data-theme="dark"] .about h2 { color: var(--pale); }
 
 .about-text p {
   color: var(--ink-soft);
@@ -273,12 +269,6 @@ body {
   margin-top: 2px;
 }
 .cred-icon svg { color: var(--teal); }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .cred-icon { background: var(--teal-light); }
-  :root:not([data-theme="light"]) .cred-icon svg { color: var(--pale); }
-}
-:root[data-theme="dark"] .cred-icon { background: var(--teal-light); }
-:root[data-theme="dark"] .cred-icon svg { color: var(--pale); }
 
 .cred-title {
   font-weight: 500;
@@ -303,10 +293,6 @@ body {
   text-wrap: balance;
   color: var(--teal);
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .services h2 { color: var(--pale); }
-}
-:root[data-theme="dark"] .services h2 { color: var(--pale); }
 
 .services-grid {
   display: grid;
@@ -351,10 +337,6 @@ body {
   margin-bottom: 12px;
   font-variant-numeric: tabular-nums;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .service-card .num { color: var(--pale); opacity: .12; }
-}
-:root[data-theme="dark"] .service-card .num { color: var(--pale); opacity: .12; }
 
 .service-meta {
   display: flex;
@@ -375,24 +357,16 @@ body {
   color: var(--teal);
   margin-left: auto;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .service-price { color: var(--pale); }
-}
-:root[data-theme="dark"] .service-price { color: var(--pale); }
 
 .service-card h3 {
   font-family: var(--serif);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--teal);
+  color: #003740 !important;
   line-height: 1.2;
   margin-bottom: 10px;
   text-wrap: balance;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .service-card h3 { color: var(--pale); }
-}
-:root[data-theme="dark"] .service-card h3 { color: var(--pale); }
 
 .service-card p {
   font-size: 0.84rem;
@@ -467,10 +441,6 @@ body {
   text-wrap: balance;
   line-height: 1.2;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .cta h2 { color: var(--pale); }
-}
-:root[data-theme="dark"] .cta h2 { color: var(--pale); }
 
 .cta p {
   color: var(--ink-soft);
@@ -515,12 +485,6 @@ body {
   transition: background .2s, color .2s;
 }
 .btn-ghost:hover { background: var(--teal); color: var(--warm-white); }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .btn-ghost { border-color: var(--pale); color: var(--pale); }
-  :root:not([data-theme="light"]) .btn-ghost:hover { background: var(--pale); color: var(--teal); }
-}
-:root[data-theme="dark"] .btn-ghost { border-color: var(--pale); color: var(--pale); }
-:root[data-theme="dark"] .btn-ghost:hover { background: var(--pale); color: var(--teal); }
 
 .contact-note {
   font-size: 0.76rem;
