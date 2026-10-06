@@ -1,3 +1,5 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Rareș Candrea</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Jost:wght@300;400;500&display=swap">
 
@@ -24,30 +26,7 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --pale:       #1d2620;
-    --linen:      #211e1a;
-    --warm-white: #161714;
-    --ink:        #ede9e2;
-    --ink-soft:   #b8bdb4;
-    --muted:      #7a8078;
-    --rule:       rgba(232,237,224,.1);
-    --teal-light: rgba(232,237,224,.04);
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --pale:       #1d2620;
-  --linen:      #211e1a;
-  --warm-white: #161714;
-  --ink:        #ede9e2;
-  --ink-soft:   #b8bdb4;
-  --muted:      #7a8078;
-  --rule:       rgba(232,237,224,.1);
-  --teal-light: rgba(232,237,224,.04);
-  color-scheme: dark;
-}
+/* Dark mode dezactivat — pagina rămâne mereu light */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -61,8 +40,8 @@ body {
 
 /* ── NAV ── */
 .nav {
-  background: var(--linen);
-  border-bottom: 1px solid var(--rule);
+  background: var(--teal);
+  border-bottom: none;
   padding: 18px clamp(20px, 6vw, 72px);
   position: sticky;
   top: env(safe-area-inset-top, 0px);
@@ -80,19 +59,14 @@ body {
   font-family: var(--serif);
   font-size: 1rem;
   font-weight: 700;
-  color: var(--teal);
+  color: #fff;
   letter-spacing: .01em;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .nav-name { color: var(--pale); }
-}
-:root[data-theme="dark"] .nav-name { color: var(--pale); }
-
 .nav-title {
   font-size: 0.7rem;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: rgba(255,255,255,.5);
 }
 .nav-cta {
   display: inline-block;
@@ -111,8 +85,8 @@ body {
 }
 .nav-cta:hover { opacity: .85; }
 .nav-actions { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
-.nav-link { font-size: 0.72rem; color: var(--muted); text-decoration: none; letter-spacing: .02em; }
-.nav-link:hover { color: var(--ink); }
+.nav-link { font-size: 0.72rem; color: rgba(255,255,255,.6); text-decoration: none; letter-spacing: .02em; }
+.nav-link:hover { color: #fff; }
 @media (max-width: 640px) { .nav-link { display: none; } }
 
 /* ── HERO ── */
@@ -555,13 +529,56 @@ footer {
 }
 footer strong { color: rgba(250,250,247,.75); font-weight: 400; }
 
-/* ── RESPONSIVE ── */
+/* ── RESPONSIVE MOBILE ── */
 @media (max-width: 640px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-photo-wrap { display: none; }
-  .about-inner { grid-template-columns: 1fr; }
-  .pillar { border-right: none; }
+  /* Nav */
+  .nav { padding: 14px 20px; }
   .nav-title { display: none; }
+  .nav-actions { gap: 10px; }
+  .nav-link { display: none; }
+  .nav-cta { font-size: 0.68rem; padding: 8px 14px; }
+
+  /* Hero — poza sus, text jos */
+  .hero { padding: 0 0 40px; }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0;
+  }
+  .hero-photo-wrap {
+    display: block;
+    width: 100%;
+    order: -1;
+    margin-bottom: 28px;
+  }
+  .hero-photo {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-position: center 20%;
+    border-radius: 0;
+  }
+  .hero-text { padding: 0 20px; }
+  .hero h1 { font-size: 2rem; margin-bottom: 18px; }
+  .hero-bio { font-size: 0.92rem; margin-bottom: 24px; }
+
+  /* About */
+  .about { padding: 40px 20px; }
+  .about-inner { grid-template-columns: 1fr; gap: 32px; }
+
+  /* Services */
+  .services { padding: 40px 20px; }
+  .services-grid { grid-template-columns: 1fr; }
+
+  /* Approach */
+  .approach { padding: 40px 20px; }
+  .pillars { grid-template-columns: 1fr; }
+  .pillar { border-right: none; }
+  .approach h2 { font-size: 1.6rem; margin-bottom: 32px; }
+
+  /* CTA */
+  .cta { padding: 48px 20px; }
+  .cta-links { flex-direction: column; align-items: center; }
+  .btn-primary, .btn-ghost { width: 100%; text-align: center; }
 }
 </style>
 
